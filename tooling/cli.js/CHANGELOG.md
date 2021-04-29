@@ -1,5 +1,17 @@
 # Changelog
 
+## \[1.0.0-beta-rc.5]
+
+- CommonJS chunks are now properly exported with `.cjs` extension
+  - Bumped due to a bump in cli.rs.
+  - [ddcd923](https://www.github.com/tauri-apps/tauri/commit/ddcd9233bd6f499aa7f22484d6c151b01778bc1b) fix(api): export commonjs chunks with `.cjs` extension, fix [#1625](https://www.github.com/tauri-apps/tauri/pull/1625) ([#1627](https://www.github.com/tauri-apps/tauri/pull/1627)) on 2021-04-26
+- Adds `options` argument to the shell command API (`env` and `cwd` configuration).
+  - Bumped due to a bump in cli.rs.
+  - [721e98f](https://www.github.com/tauri-apps/tauri/commit/721e98f175567b360c86f30565ab1b9d08e7cf85) feat(core): add env, cwd to the command API, closes [#1634](https://www.github.com/tauri-apps/tauri/pull/1634) ([#1635](https://www.github.com/tauri-apps/tauri/pull/1635)) on 2021-04-28
+- Adds `startDragging` API on the window module.
+  - Bumped due to a bump in cli.rs.
+  - [c31f097](https://www.github.com/tauri-apps/tauri/commit/c31f0978c535f794fffb75a121e69a323e70b06e) refactor: update to wry 0.9 ([#1630](https://www.github.com/tauri-apps/tauri/pull/1630)) on 2021-04-28
+
 ## \[1.0.0-beta-rc.4]
 
 - Fixes the Message `command` name value on plugin invoke handler.

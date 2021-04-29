@@ -1,5 +1,50 @@
 # Changelog
 
+## \[1.0.0-beta-rc.5]
+
+- Adds `options` argument to the shell command API (`env` and `cwd` configuration).
+  - [721e98f](https://www.github.com/tauri-apps/tauri/commit/721e98f175567b360c86f30565ab1b9d08e7cf85) feat(core): add env, cwd to the command API, closes [#1634](https://www.github.com/tauri-apps/tauri/pull/1634) ([#1635](https://www.github.com/tauri-apps/tauri/pull/1635)) on 2021-04-28
+
+- The `create_window` API callback now takes two arguments: the `WindowBuilder` and the `WebviewAttributes` and must return a tuple containing both values.
+  - [c31f097](https://www.github.com/tauri-apps/tauri/commit/c31f0978c535f794fffb75a121e69a323e70b06e) refactor: update to wry 0.9 ([#1630](https://www.github.com/tauri-apps/tauri/pull/1630)) on 2021-04-28
+
+- Simplify usage of app event and window label types. The following functions now
+  accept references the `Tag` can be borrowed as. This means an `&str` can now be
+  accepted for functions like `Window::emit`. This is a breaking change for the
+  following items, which now need to take a reference. Additionally, type inference
+  for `&"event".into()` will no longer work, but `&"event".to_string()` will. The
+  solution for this is to now just pass `"event"` because `Borrow<str>` is implemented
+  for the default event type `String`.
+
+- **Breaking:** `Window::emit` now accepts `Borrow` for the event.
+
+- **Breaking:** `Window::emit_others` now accepts `Borrow` for the event
+
+- **Breaking:** `Window::trigger` now accepts `Borrow` for the event.
+
+- **Breaking:** `Manager::emit_all` now accepts `Borrow` for the event.
+
+- **Breaking:** `Manager::emit_to` now accepts `Borrow` for both the event and window label.
+
+- **Breaking:** `Manager::trigger_global` now accepts `Borrow` for the event.
+
+- **Breaking:** `Manager::get_window` now accepts `Borrow` for the window label.
+
+- *(internal):* `trait tauri::runtime::tag::TagRef` helper for accepting tag references.
+  Any time you want to accept a tag reference, that trait will handle requiring the reference
+  to have all the necessary bounds, and generate errors when the exposed function doesn't
+  set a bound like `P::Event: Borrow<E>`.
+
+- [181e132](https://www.github.com/tauri-apps/tauri/commit/181e132aee895da23c1b63deb41a52e9910910cc) refactor(core): simplify usage of app event and window label types ([#1623](https://www.github.com/tauri-apps/tauri/pull/1623)) on 2021-04-27
+
+- [a755d23](https://www.github.com/tauri-apps/tauri/commit/a755d23e1bd0a3d6a2b6a85ff94feaf5a1a3a60d) refactor(core): more bounds for better errors from [#1623](https://www.github.com/tauri-apps/tauri/pull/1623) ([#1632](https://www.github.com/tauri-apps/tauri/pull/1632)) on 2021-04-27
+
+- Rename `Attributes` to `WindowBuilder`.
+  - [c31f097](https://www.github.com/tauri-apps/tauri/commit/c31f0978c535f794fffb75a121e69a323e70b06e) refactor: update to wry 0.9 ([#1630](https://www.github.com/tauri-apps/tauri/pull/1630)) on 2021-04-28
+
+- Update `wry` to v0.9.
+  - [c31f097](https://www.github.com/tauri-apps/tauri/commit/c31f0978c535f794fffb75a121e69a323e70b06e) refactor: update to wry 0.9 ([#1630](https://www.github.com/tauri-apps/tauri/pull/1630)) on 2021-04-28
+
 ## \[1.0.0-beta-rc.4]
 
 - Update `tauri-macros` and `tauri-utils` to `1.0.0-beta-rc.1`.

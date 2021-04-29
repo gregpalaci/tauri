@@ -1,6 +1,7 @@
 {
   "tag": "beta-rc",
   "changes": [
+    ".changes/api-cjs-chunks.md",
     ".changes/api-package-fix.md",
     ".changes/appimage-icon.md",
     ".changes/beta-rc.md",
@@ -8,14 +9,18 @@
     ".changes/cli-rs-dist-validation.md",
     ".changes/cli.rs-camelcase-rename.md",
     ".changes/clr.rs-fix-tauri-info.md",
+    ".changes/command-options.md",
     ".changes/create-webview-error.md",
+    ".changes/create-window-refactor.md",
     ".changes/cta-remove-lodash.md",
     ".changes/cta-remove-tauri-from-vanilla.md",
     ".changes/cta-tauri-script.md",
+    ".changes/cta-testing-suite.md",
     ".changes/deb-custom-files.md",
     ".changes/deps-rc-detection.md",
     ".changes/dialog-default-path-file.md",
     ".changes/dialog-default-path-validation.md",
+    ".changes/drag-window-api.md",
     ".changes/event-once.md",
     ".changes/expose-async-runtime.md",
     ".changes/expose-page-load-payload.md",
@@ -33,14 +38,17 @@
     ".changes/package-info-config.md",
     ".changes/plugin-initialization-result.md",
     ".changes/sidecar-fix.md",
+    ".changes/simplify-tag-label-usage.md",
     ".changes/supports-custom-template.md",
     ".changes/sync-metadata.md",
     ".changes/tauri-icon-cli.md",
     ".changes/tauri-init-ci-fix.md",
     ".changes/updater-feature.md",
     ".changes/user-data-path.md",
+    ".changes/window-attributes-rename.md",
     ".changes/windows-user-data-path.md",
     ".changes/wix-fragments.md",
-    ".changes/wix-skip-webview-install.md"
+    ".changes/wix-skip-webview-install.md",
+    ".changes/wry-update.md"
   ]
 }

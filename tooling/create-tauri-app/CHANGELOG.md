@@ -1,5 +1,10 @@
 # Changelog
 
+## \[1.0.0-beta-rc.5]
+
+- We setup an e2e type test suite for CTA. It is mostly an internal change, but should help with stability moving forward.
+  - [af6411d](https://www.github.com/tauri-apps/tauri/commit/af6411d5f8c9fd1c3d9b4f3c2d79e8f1bd0efbf2) feat: setup testing for CTA ([#1615](https://www.github.com/tauri-apps/tauri/pull/1615)) on 2021-04-27
+
 ## \[1.0.0-beta-rc.4]
 
 - Manually set `tauri` script instead of using `npm set-script` for compatabilty with older npm versions
